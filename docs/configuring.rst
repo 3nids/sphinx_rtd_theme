@@ -21,6 +21,7 @@ For example:
         'style_external_links': False,
         'vcs_pageview_mode': '',
         'style_nav_header_background': 'white',
+        'versioning' : False,
         # Toc options
         'collapse_navigation': True,
         'sticky_navigation': True,
@@ -34,6 +35,14 @@ Table of contents options
 
 The following options change how :rst:dir:`sphinx:toctree` directives generate
 documentation navigation.
+
+.. confval::.versioning
+
+    :type: boolean
+    :default: ``False``
+
+    Add 'versions' menu to the bottom of the sidebar.
+
 
 .. confval:: collapse_navigation
 
