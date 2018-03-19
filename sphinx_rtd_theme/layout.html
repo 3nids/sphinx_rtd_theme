@@ -129,7 +129,7 @@
           {% endif %}
           </a>
 
-          {% if theme_display_version %}
+          {% if (READTHEDOCS or theme_versioning) and current_version %}
             {%- set nav_version = version %}
             {% if READTHEDOCS and current_version %}
               {%- set nav_version = current_version %}
@@ -210,7 +210,9 @@
     </section>
 
   </div>
-  {% include "versions.html" %}
+  {% if READTHEDOCS or theme_versioning %}
+    {% include "versions.html" %}
+  {% endif%}
 
   <script type="text/javascript">
       jQuery(function () {
